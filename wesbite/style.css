@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+body{
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    display:flex;
+    flex-direction: row;
+}
+
+.left-page{
+   background-color: #2F3B19; 
+   height: 100vh;
+   width: 50vw;
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+}
+
+.right-page{
+    background-color: white;
+    font-family: 'Caveat', cursive;
+    height: 100vh;
+    width: 50vw;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+
+}
+
+h2{
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    color: white;
+    font-weight: 100;
+    margin-top: 5px;
+
+}
+label {
+    width:180px;
+    clear:left;
+    text-align:left;
+    padding-right:10px;
+    font-family: 'Caveat';
+    font-weight: 100;
+    color: white;
+    font-size: 16px;
+}
+
+input, label {
+    float:left;
+
+}
+
+input{
+    border-radius: 6px;
+    color: black;
+    border: 1px solid white;
+    background-color:#96b360 ;
+}
+
+.input-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-element{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px;
+    width: 50%;
+}
+
+.input-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.input-submit-element{
+    height: 35px;
+    width: 70px;    
+    border-radius: 12px;
+    background-color:yellow;
+    color:black;
+    font-weight: bold;
+}
