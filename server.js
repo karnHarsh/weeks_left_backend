@@ -1,30 +1,15 @@
-console.log("Server is starting");
-
 var express = require("express");
+var bodyParser = require('body-parser')
 
-const path = require("path");
+const userResgistrationHandler = require("./routes/register");
 
 var app = express();
+const port = process.env.PORT || 3000;
 
-var server = app.listen((process.env.PORT||3000), listening);
-//const port = process.env.PORT||3000
+var jsonParser = bodyParser.json()
 
-function listening(){
-    console.log("Listening...");
-}
+console.log("Server is starting");
 
-app.use(express.static('website'));
-//app.use(express.static(path.join(__dirname + '/website')));
+app.listen(port, () => {console.log(`Weeks Left App BACKEND listening at http://localhost:${port}`)})
 
-app.get('/register',userResgistration);
-
-function userResgistration(request, response){
-    response.send("Congratulations! You are registered.");
-    //response.sendFile(path.join(__dirname + '/static/index.html')));
-}
-
-app.get('/email',sendEmail);
-
-function sendEmail(request,response){
-    response.send("Mail sent.");
-}
+app.post('/register',jsonParser,  userResgistrationHandler);
